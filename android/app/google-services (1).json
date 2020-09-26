@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "706864651792",
+    "firebase_url": "https://automatex-806ac.firebaseio.com",
+    "project_id": "automatex-806ac",
+    "storage_bucket": "automatex-806ac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:706864651792:android:f4a6f8428e9c6186be7495",
+        "android_client_info": {
+          "package_name": "com.example.automateX"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "706864651792-khhjch1ep4gknhq8o9jrd6uka53cek1e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJqaIu52Nu8oyLf9zorCNGNpdcH8D6K-Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "706864651792-khhjch1ep4gknhq8o9jrd6uka53cek1e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
