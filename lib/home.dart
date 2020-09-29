@@ -6,27 +6,7 @@ class home extends StatefulWidget {
   _homeState createState() => _homeState();
 }
 
-class _homeState extends State<home> with SingleTickerProviderStateMixin {
-  AnimationController _controller;
-  Animation<double> _animation;
-  @override
-  void initState() {
-    _controller =
-        new AnimationController(duration: Duration(seconds: 3), vsync: this,
-        
-        );
-    _animation = new Tween(begin: 0.0, end: 300.0).animate(CurvedAnimation(parent: _controller, curve:Curves.bounceInOut);
-    super.initState();
-    _controller.forward();
-  }
-
-  @override
-  void dispose() {
-    
-    _controller.dispose();
-    super.dispose();
-  }
-
+class _homeState extends State<home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,7 +51,7 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
                 focusColor: Colors.pinkAccent,
                 hoverColor: Colors.pink,
                 contentPadding: EdgeInsets.all(12.0),
-              )
+              ),
             ],
           ),
           Column(
