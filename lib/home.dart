@@ -6,7 +6,7 @@ class home extends StatefulWidget {
   _homeState createState() => _homeState();
 }
 
-class _homeState extends State<home> {
+class _homeState extends State<home> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,6 +33,7 @@ class _homeState extends State<home> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               ListTile(
+                onTap: () => {},
                 leading: Icon(
                   Icons.functions,
                   color: Colors.white70,
