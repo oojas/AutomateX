@@ -46,7 +46,24 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Text("Hi"),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                ListTile(
+                  leading: Icon(Icons.note_add),
+                  title: Text(
+                    "DFA",
+                    style: GoogleFonts.courgette(
+                        fontSize: 21, color: Colors.redAccent),
+                  ),
+                  dense: true,
+                  selected: true,
+                  focusColor: Colors.pinkAccent,
+                  hoverColor: Colors.pink,
+                  contentPadding: EdgeInsets.all(12.0),
+                )
+              ],
+            ),
             Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
