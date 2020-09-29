@@ -1,6 +1,6 @@
 # automateX
 
-A new Flutter project.
+Flutter App for learning finite automata.
 
 ## Getting Started
 
