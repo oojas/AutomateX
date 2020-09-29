@@ -50,7 +50,14 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 ListTile(
-                  leading: Icon(Icons.note_add),
+                  leading: Icon(
+                    Icons.functions,
+                    color: Colors.white70,
+                  ),
+                  trailing: Icon(
+                    Icons.info_outline,
+                    color: Colors.green,
+                  ),
                   title: Text(
                     "DFA",
                     style: GoogleFonts.courgette(
@@ -68,9 +75,12 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 ListTile(
-                  leading: Icon(Icons.note_add),
+                  leading: Icon(
+                    Icons.functions,
+                    color: Colors.white70,
+                  ),
                   title: Text(
-                    "Notes",
+                    "NFA",
                     style: GoogleFonts.courgette(
                         fontSize: 21, color: Colors.redAccent),
                   ),
@@ -79,6 +89,10 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
                   focusColor: Colors.pinkAccent,
                   hoverColor: Colors.pink,
                   contentPadding: EdgeInsets.all(12.0),
+                  trailing: Icon(
+                    Icons.info_outline,
+                    color: Colors.green,
+                  ),
                 )
               ],
             ),
