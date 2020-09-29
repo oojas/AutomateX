@@ -27,21 +27,45 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 15.0,
-        automaticallyImplyLeading: true,
-        leading: Icon(
-          Icons.archive,
-          color: Colors.cyanAccent,
+        appBar: AppBar(
+          elevation: 15.0,
+          automaticallyImplyLeading: true,
+          leading: Icon(
+            Icons.archive,
+            color: Colors.cyanAccent,
+          ),
+          title: Text(
+            "What do you wanna Learn?",
+            style: GoogleFonts.permanentMarker(
+                fontSize: 21,
+                fontStyle: FontStyle.normal,
+                color: Colors.amberAccent),
+          ),
         ),
-        title: Text(
-          "What do you wanna Learn?",
-          style: GoogleFonts.permanentMarker(
-              fontSize: 21,
-              fontStyle: FontStyle.normal,
-              color: Colors.amberAccent),
-        ),
-      ),
-    );
+        body: Column(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Text("Hi"),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                ListTile(
+                  leading: Icon(Icons.note_add),
+                  title: Text(
+                    "Notes",
+                    style: GoogleFonts.courgette(
+                        fontSize: 21, color: Colors.redAccent),
+                  ),
+                  dense: true,
+                  selected: true,
+                  focusColor: Colors.pinkAccent,
+                  hoverColor: Colors.pink,
+                  contentPadding: EdgeInsets.all(12.0),
+                )
+              ],
+            ),
+          ],
+        ));
   }
 }
