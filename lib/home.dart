@@ -42,49 +42,60 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
                 color: Colors.amberAccent),
           ),
         ),
-        body: ListView(
-          scrollDirection: Axis.horizontal,
+        body: Column(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            ListTile(
-              leading: Icon(
-                Icons.functions,
-                color: Colors.white70,
-              ),
-              trailing: Icon(
-                Icons.info_outline,
-                color: Colors.indigoAccent,
-              ),
-              title: Text(
-                "DFA",
-                style: GoogleFonts.courgette(
-                    fontSize: 21, color: Colors.redAccent),
-              ),
-              dense: true,
-              selected: true,
-              focusColor: Colors.pinkAccent,
-              hoverColor: Colors.pink,
-              contentPadding: EdgeInsets.all(12.0),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                ListTile(
+                  leading: Icon(
+                    Icons.functions,
+                    color: Colors.white70,
+                  ),
+                  trailing: Icon(
+                    Icons.info_outline,
+                    color: Colors.indigoAccent,
+                  ),
+                  title: Text(
+                    "DFA",
+                    style: GoogleFonts.courgette(
+                        fontSize: 21, color: Colors.redAccent),
+                  ),
+                  dense: true,
+                  selected: true,
+                  focusColor: Colors.pinkAccent,
+                  hoverColor: Colors.pink,
+                  contentPadding: EdgeInsets.all(12.0),
+                )
+              ],
             ),
-            ListTile(
-              leading: Icon(
-                Icons.functions,
-                color: Colors.white70,
-              ),
-              trailing: Icon(
-                Icons.info_outline,
-                color: Colors.indigoAccent,
-              ),
-              title: Text(
-                "DFA",
-                style: GoogleFonts.courgette(
-                    fontSize: 21, color: Colors.redAccent),
-              ),
-              dense: true,
-              selected: true,
-              focusColor: Colors.pinkAccent,
-              hoverColor: Colors.pink,
-              contentPadding: EdgeInsets.all(12.0),
-            )
+            Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                ListTile(
+                  leading: Icon(
+                    Icons.functions,
+                    color: Colors.white70,
+                  ),
+                  title: Text(
+                    "NFA",
+                    style: GoogleFonts.courgette(
+                        fontSize: 21, color: Colors.redAccent),
+                  ),
+                  dense: true,
+                  selected: true,
+                  focusColor: Colors.pinkAccent,
+                  hoverColor: Colors.pink,
+                  contentPadding: EdgeInsets.all(12.0),
+                  trailing: Icon(
+                    Icons.info_outline,
+                    color: Colors.indigoAccent,
+                  ),
+                )
+              ],
+            ),
           ],
         ));
   }
