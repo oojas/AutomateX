@@ -34,6 +34,13 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
           Icons.archive,
           color: Colors.cyanAccent,
         ),
+        title: Text(
+          "What do you wanna Learn?",
+          style: GoogleFonts.permanentMarker(
+              fontSize: 21,
+              fontStyle: FontStyle.normal,
+              color: Colors.amberAccent),
+        ),
       ),
     );
   }
