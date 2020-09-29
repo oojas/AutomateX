@@ -56,7 +56,7 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
                   ),
                   trailing: Icon(
                     Icons.info_outline,
-                    color: Colors.green,
+                    color: Colors.indigoAccent,
                   ),
                   title: Text(
                     "DFA",
@@ -91,7 +91,7 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
                   contentPadding: EdgeInsets.all(12.0),
                   trailing: Icon(
                     Icons.info_outline,
-                    color: Colors.green,
+                    color: Colors.indigoAccent,
                   ),
                 )
               ],
