@@ -46,6 +46,15 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: FloatingActionButton(
+                onPressed: null,
+                splashColor: Colors.blue,
+                backgroundColor: Colors.amber,
+                child: Icon(Icons.speaker_notes),
+              ),
+            ),
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
