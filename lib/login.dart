@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/animation.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_auth_buttons/flutter_auth_buttons.dart';
 
 class login extends StatefulWidget {
   @override
@@ -8,7 +10,7 @@ class login extends StatefulWidget {
 
 class _loginState extends State<login> with SingleTickerProviderStateMixin {
   AnimationController _controller;
-  Animation<double> _animation, animation;
+  Animation<double> _animation, animation, animation1;
 
   @override
   void initState() {
@@ -18,6 +20,8 @@ class _loginState extends State<login> with SingleTickerProviderStateMixin {
     _animation = new Tween(begin: -1.0, end: 0.0).animate(
         CurvedAnimation(parent: _controller, curve: Curves.elasticInOut));
     animation = new Tween(begin: 1.0, end: 0.0).animate(
+        CurvedAnimation(parent: _controller, curve: Curves.elasticInOut));
+    animation1 = new Tween(begin: -0.8, end: 0.0).animate(
         CurvedAnimation(parent: _controller, curve: Curves.elasticInOut));
     _controller.forward();
   }
@@ -48,7 +52,22 @@ class _loginState extends State<login> with SingleTickerProviderStateMixin {
                     Transform(
                         transform: Matrix4.translationValues(
                             animation.value * width, 0.0, 0.0),
-                        child: Text("HI")),
+                        child: Text("HI Geeks!",
+                            style: GoogleFonts.rockSalt(
+                                fontSize: 40,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.deepOrange))),
+                    Padding(
+                      padding: const EdgeInsets.all(9.0),
+                      child: Transform(
+                        transform: Matrix4.translationValues(
+                            animation1.value * width, 0.0, 0.0),
+                        child: GoogleSignInButton(
+                          onPressed: () {},
+                          darkMode: true,
+                        ),
+                      ),
+                    )
                   ],
                 ),
               ),
