@@ -32,6 +32,7 @@ dependencies:
   splashscreen: ^1.2.0
   google_fonts: ^1.1.0
   cloud_firestore:
+  route_transitions: ^1.0.2
 
 dev_dependencies:
   flutter_test:

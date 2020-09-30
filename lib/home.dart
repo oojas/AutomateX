@@ -1,5 +1,7 @@
+import 'package:automateX/Pages/DFA.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:route_transitions/route_transitions.dart';
 
 class home extends StatefulWidget {
   @override
@@ -33,7 +35,11 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               ListTile(
-                onTap: () => {},
+                onTap: () {
+                  Navigator.of(context).push(PageRouteTransition(
+                      animationType: AnimationType.slide_right,
+                      builder: (context) => DFA()));
+                },
                 leading: Icon(
                   Icons.functions,
                   color: Colors.white70,
@@ -140,6 +146,31 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
                 ),
                 title: Text(
                   "CNF | GNF | CFG",
+                  style: GoogleFonts.courgette(
+                      fontSize: 21, color: Colors.redAccent),
+                ),
+                dense: true,
+                selected: true,
+                focusColor: Colors.pinkAccent,
+                hoverColor: Colors.pink,
+                contentPadding: EdgeInsets.all(12.0),
+                trailing: Icon(
+                  Icons.info_outline,
+                  color: Colors.indigoAccent,
+                ),
+              )
+            ],
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              ListTile(
+                leading: Icon(
+                  Icons.functions,
+                  color: Colors.white70,
+                ),
+                title: Text(
+                  "Practice Questions",
                   style: GoogleFonts.courgette(
                       fontSize: 21, color: Colors.redAccent),
                 ),
