@@ -8,6 +8,10 @@ class DFA extends StatefulWidget {
 class _DFAState extends State<DFA> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return SingleChildScrollView(
+      child: Column(
+        children: [Text()],
+      ),
+    );
   }
 }

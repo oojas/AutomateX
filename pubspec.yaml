@@ -33,6 +33,11 @@ dependencies:
   google_fonts: ^1.1.0
   cloud_firestore:
   route_transitions: ^1.0.2
+  flutter_full_pdf_viewer: ^1.0.6
+  http: ^0.12.2
+  firebase_storage: ^3.0.8
+  firebase_core: ^0.4.0+9
+  firebase_analytics: ^5.0.6
 
 dev_dependencies:
   flutter_test:
