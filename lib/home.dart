@@ -27,6 +27,7 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
               color: Colors.amberAccent),
         ),
       ),
+      backgroundColor: Colors.green.shade900,
       body: Column(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.start,
@@ -46,12 +47,12 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
                 ),
                 trailing: Icon(
                   Icons.info_outline,
-                  color: Colors.indigoAccent,
+                  color: Colors.white,
                 ),
                 title: Text(
                   "DFA",
-                  style: GoogleFonts.courgette(
-                      fontSize: 21, color: Colors.redAccent),
+                  style:
+                      GoogleFonts.courgette(fontSize: 21, color: Colors.white),
                 ),
                 dense: true,
                 selected: true,
@@ -71,8 +72,8 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
                 ),
                 title: Text(
                   "NFA",
-                  style: GoogleFonts.courgette(
-                      fontSize: 21, color: Colors.redAccent),
+                  style:
+                      GoogleFonts.courgette(fontSize: 21, color: Colors.white),
                 ),
                 dense: true,
                 selected: true,
@@ -81,7 +82,7 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
                 contentPadding: EdgeInsets.all(12.0),
                 trailing: Icon(
                   Icons.info_outline,
-                  color: Colors.indigoAccent,
+                  color: Colors.white,
                 ),
               )
             ],
@@ -96,8 +97,8 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
                 ),
                 title: Text(
                   "NFA --> DFA",
-                  style: GoogleFonts.courgette(
-                      fontSize: 21, color: Colors.redAccent),
+                  style:
+                      GoogleFonts.courgette(fontSize: 21, color: Colors.white),
                 ),
                 dense: true,
                 selected: true,
@@ -106,7 +107,7 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
                 contentPadding: EdgeInsets.all(12.0),
                 trailing: Icon(
                   Icons.info_outline,
-                  color: Colors.indigoAccent,
+                  color: Colors.white,
                 ),
               )
             ],
@@ -121,8 +122,8 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
                 ),
                 title: Text(
                   "Minimization of DFA",
-                  style: GoogleFonts.courgette(
-                      fontSize: 21, color: Colors.redAccent),
+                  style:
+                      GoogleFonts.courgette(fontSize: 21, color: Colors.white),
                 ),
                 dense: true,
                 selected: true,
@@ -131,7 +132,7 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
                 contentPadding: EdgeInsets.all(12.0),
                 trailing: Icon(
                   Icons.info_outline,
-                  color: Colors.indigoAccent,
+                  color: Colors.white,
                 ),
               )
             ],
@@ -146,8 +147,8 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
                 ),
                 title: Text(
                   "CNF | GNF | CFG",
-                  style: GoogleFonts.courgette(
-                      fontSize: 21, color: Colors.redAccent),
+                  style:
+                      GoogleFonts.courgette(fontSize: 21, color: Colors.white),
                 ),
                 dense: true,
                 selected: true,
@@ -156,7 +157,7 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
                 contentPadding: EdgeInsets.all(12.0),
                 trailing: Icon(
                   Icons.info_outline,
-                  color: Colors.indigoAccent,
+                  color: Colors.white,
                 ),
               )
             ],
@@ -171,8 +172,8 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
                 ),
                 title: Text(
                   "Practice Questions",
-                  style: GoogleFonts.courgette(
-                      fontSize: 21, color: Colors.redAccent),
+                  style:
+                      GoogleFonts.courgette(fontSize: 21, color: Colors.white),
                 ),
                 dense: true,
                 selected: true,
@@ -181,7 +182,7 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
                 contentPadding: EdgeInsets.all(12.0),
                 trailing: Icon(
                   Icons.info_outline,
-                  color: Colors.indigoAccent,
+                  color: Colors.white,
                 ),
               )
             ],

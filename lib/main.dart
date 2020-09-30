@@ -6,6 +6,6 @@ void main() {
     title: 'Automatex',
     home: splash(),
     debugShowCheckedModeBanner: false,
-    theme: ThemeData.dark(),
+    theme: ThemeData.light(),
   ));
 }
