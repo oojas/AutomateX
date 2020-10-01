@@ -1,7 +1,9 @@
+import 'package:automateX/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/animation.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:flutter_auth_buttons/flutter_auth_buttons.dart';
+import 'package:route_transitions/route_transitions.dart';
+import 'package:sleek_button/sleek_button.dart';
 
 class login extends StatefulWidget {
   @override
@@ -58,15 +60,29 @@ class _loginState extends State<login> with SingleTickerProviderStateMixin {
                                 fontWeight: FontWeight.bold,
                                 color: Colors.deepOrange))),
                     Padding(
-                      padding: const EdgeInsets.all(9.0),
+                      padding: const EdgeInsets.all(11.0),
                       child: Transform(
                         transform: Matrix4.translationValues(
                             animation1.value * width, 0.0, 0.0),
-                        child: GoogleSignInButton(
-                          onPressed: () {},
-                          darkMode: true,
-                        ),
                       ),
+                    ),
+                    SleekButton(
+                      onTap: () {
+                        Navigator.of(context).push(PageRouteTransition(
+                            animationType: AnimationType.fade,
+                            builder: (context) => home()));
+                      },
+                      style: SleekButtonStyle.outlined(
+                        color: Colors.purple,
+                        context: context,
+                        rounded: true,
+                        size: SleekButtonSize.medium,
+                      ),
+                      child: Text("Are You Ready",
+                          style: GoogleFonts.bungeeShade(
+                              fontSize: 21,
+                              fontWeight: FontWeight.normal,
+                              color: Colors.purple)),
                     )
                   ],
                 ),

@@ -38,8 +38,8 @@ dependencies:
   firebase_storage: ^3.0.8
   firebase_core: ^0.4.0+9
   firebase_analytics: ^5.0.6
-  firebase_auth:
-  flutter_auth_buttons: ^0.10.0
+  sleek_button: ^0.1.1
+  
 
 dev_dependencies:
   flutter_test:
