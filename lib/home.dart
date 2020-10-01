@@ -2,6 +2,7 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:automateX/Pages/DFA.dart';
+import 'package:automateX/Pages/floatingfile.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:route_transitions/route_transitions.dart';
@@ -268,7 +269,11 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
           Padding(
             padding: const EdgeInsets.only(left: 300.0, top: 90),
             child: FloatingActionButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(PageRouteTransition(
+                    animationType: AnimationType.scale,
+                    builder: (context) => floatfile()));
+              },
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(10.0)),
               ),
