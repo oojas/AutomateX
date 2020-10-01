@@ -1,7 +1,13 @@
+import 'dart:io';
+import 'dart:typed_data';
+
 import 'package:automateX/Pages/DFA.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:route_transitions/route_transitions.dart';
+import 'package:path_provider/path_provider.dart';
+
+const String _documentPath = 'lib/Assets/DFA.pdf';
 
 class home extends StatefulWidget {
   @override
@@ -9,6 +15,20 @@ class home extends StatefulWidget {
 }
 
 class _homeState extends State<home> with SingleTickerProviderStateMixin {
+  Future<String> prepareTestPdf() async {
+    final ByteData bytes =
+        await DefaultAssetBundle.of(context).load(_documentPath);
+    final Uint8List list = bytes.buffer.asUint8List();
+
+    final tempDir = await getTemporaryDirectory();
+    final tempDocumentPath = '${tempDir.path}/$_documentPath';
+
+    final file = await File(tempDocumentPath).create(recursive: true);
+    file.writeAsBytesSync(list);
+
+    return tempDocumentPath;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,17 +37,17 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
         automaticallyImplyLeading: true,
         leading: Icon(
           Icons.question_answer,
-          color: Colors.yellow,
+          color: Colors.blue.shade500,
         ),
         title: Text(
           "What do you wanna Learn?",
           style: GoogleFonts.permanentMarker(
               fontSize: 21,
               fontStyle: FontStyle.normal,
-              color: Colors.amberAccent),
+              color: Colors.lightBlue),
         ),
       ),
-      backgroundColor: Colors.green.shade900,
+      backgroundColor: Colors.pink.shade200,
       body: Column(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.start,
@@ -35,30 +55,36 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              ListTile(
-                onTap: () {
-                  Navigator.of(context).push(PageRouteTransition(
-                      animationType: AnimationType.slide_right,
-                      builder: (context) => DFA()));
-                },
-                leading: Icon(
-                  Icons.functions,
-                  color: Colors.white70,
+              Builder(
+                builder: (context) => ListTile(
+                  onTap: () async {
+                    var path = await prepareTestPdf();
+                    Navigator.of(context).push(PageRouteTransition(
+                        animationType: AnimationType.slide_right,
+                        builder: (context) => DFA(path)));
+                  },
+                  leading: Icon(
+                    Icons.functions,
+                    color: Colors.white70,
+                  ),
+                  trailing: Icon(
+                    Icons.info_outline,
+                    color: Colors.white,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                  ),
+                  title: Text(
+                    "DFA",
+                    style: GoogleFonts.courgette(
+                        fontSize: 21, color: Colors.white),
+                  ),
+                  dense: true,
+                  selected: true,
+                  focusColor: Colors.pinkAccent,
+                  hoverColor: Colors.pink,
+                  contentPadding: EdgeInsets.all(12.0),
                 ),
-                trailing: Icon(
-                  Icons.info_outline,
-                  color: Colors.white,
-                ),
-                title: Text(
-                  "DFA",
-                  style:
-                      GoogleFonts.courgette(fontSize: 21, color: Colors.white),
-                ),
-                dense: true,
-                selected: true,
-                focusColor: Colors.pinkAccent,
-                hoverColor: Colors.pink,
-                contentPadding: EdgeInsets.all(12.0),
               ),
             ],
           ),
@@ -66,6 +92,9 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               ListTile(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                ),
                 leading: Icon(
                   Icons.functions,
                   color: Colors.white70,
@@ -84,6 +113,7 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
                   Icons.info_outline,
                   color: Colors.white,
                 ),
+                onTap: () {},
               )
             ],
           ),
@@ -91,6 +121,9 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               ListTile(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                ),
                 leading: Icon(
                   Icons.functions,
                   color: Colors.white70,
@@ -116,6 +149,9 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               ListTile(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                ),
                 leading: Icon(
                   Icons.functions,
                   color: Colors.white70,
@@ -141,6 +177,9 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               ListTile(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                ),
                 leading: Icon(
                   Icons.functions,
                   color: Colors.white70,
@@ -166,6 +205,9 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               ListTile(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                ),
                 leading: Icon(
                   Icons.functions,
                   color: Colors.white70,
@@ -188,11 +230,14 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
             ],
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 300.0, top: 100),
+            padding: const EdgeInsets.only(left: 300.0, top: 90),
             child: FloatingActionButton(
-              onPressed: null,
+              onPressed: () {},
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(10.0)),
+              ),
               splashColor: Colors.blue,
-              backgroundColor: Colors.amber,
+              backgroundColor: Colors.lightBlue,
               child: Icon(Icons.speaker_notes),
             ),
           ),

@@ -1,29 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_storage/firebase_storage.dart';
+import 'package:flutter_full_pdf_viewer/full_pdf_viewer_scaffold.dart';
 
-final String file = "DFA.pdf";
-final String name = "";
+class DFA extends StatelessWidget {
+  final String pdfPath;
 
-class DFA extends StatefulWidget {
-  @override
-  _DFAState createState() => _DFAState();
-}
-
-class _DFAState extends State<DFA> {
-  static String path = "";
-  static String pdfurl = "";
-  @override
-  void initState() {
-    // LaunchFile.loadFromFirebase(context, file);
-    super.initState();
-  }
+  DFA(this.pdfPath);
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [],
-      ),
-    );
+    return PDFViewerScaffold(
+        appBar: AppBar(
+          title: Text("Document"),
+        ),
+        path: pdfPath);
   }
 }

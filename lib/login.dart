@@ -74,7 +74,7 @@ class _loginState extends State<login> with SingleTickerProviderStateMixin {
                       child: SleekButton(
                         onTap: () {
                           Navigator.of(context).push(PageRouteTransition(
-                              animationType: AnimationType.slide_down,
+                              animationType: AnimationType.slide_left,
                               builder: (context) => home()));
                         },
                         style: SleekButtonStyle.outlined(

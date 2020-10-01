@@ -33,10 +33,10 @@ dependencies:
   google_fonts: ^1.1.0
   cloud_firestore:
   route_transitions: ^1.0.2
-  flutter_full_pdf_viewer: ^1.0.6
+  flutter_full_pdf_viewer: ^1.0.4
   http: ^0.12.2
-  firebase_storage: ^3.0.8
-  firebase_core: ^0.4.0+9
+  firebase_storage: ^4.0.1
+  path_provider: ^1.4.0
   firebase_analytics: ^5.0.6
   sleek_button: ^0.1.1
   
@@ -61,6 +61,7 @@ flutter:
     - lib/Assets/img.gif
     - lib/Assets/iphone.gif
     - lib/Assets/man.jpg
+    - lib/Assets/DFA.pdf
     
 
   # An image asset can refer to one or more resolution-specific "variants", see
