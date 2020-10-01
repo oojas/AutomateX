@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 
-final file = "";
-final name = "";
+final String file = "DFA.pdf";
+final String name = "";
 
 class DFA extends StatefulWidget {
   @override
@@ -9,9 +10,11 @@ class DFA extends StatefulWidget {
 }
 
 class _DFAState extends State<DFA> {
-  static final path = "";
+  static String path = "";
+  static String pdfurl = "";
   @override
   void initState() {
+    // LaunchFile.loadFromFirebase(context, file);
     super.initState();
   }
 
