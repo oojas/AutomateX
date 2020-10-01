@@ -7,7 +7,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:route_transitions/route_transitions.dart';
 import 'package:path_provider/path_provider.dart';
 
-const String _documentPath = 'lib/Assets/DFA.pdf';
+const String doc = 'lib/Assets/DFA.pdf';
+const String _documentPath1 = 'lib/Assets/NFA.pdf';
+const String docs1 = 'lib/Assets/NFADFA.pdf';
+const String docs2 = 'lib/Assets/Minimization of DFA.pdf';
+const String docs3 = 'lib/Assets/CNF GNF CFG.pdf';
+const String docs4 = 'lib/Assets/practice.pdf';
 
 class home extends StatefulWidget {
   @override
@@ -15,13 +20,12 @@ class home extends StatefulWidget {
 }
 
 class _homeState extends State<home> with SingleTickerProviderStateMixin {
-  Future<String> prepareTestPdf() async {
-    final ByteData bytes =
-        await DefaultAssetBundle.of(context).load(_documentPath);
+  Future<String> prepareTestPdf(String doc) async {
+    final ByteData bytes = await DefaultAssetBundle.of(context).load(doc);
     final Uint8List list = bytes.buffer.asUint8List();
 
     final tempDir = await getTemporaryDirectory();
-    final tempDocumentPath = '${tempDir.path}/$_documentPath';
+    final tempDocumentPath = '${tempDir.path}/$doc';
 
     final file = await File(tempDocumentPath).create(recursive: true);
     file.writeAsBytesSync(list);
@@ -59,7 +63,7 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
               Builder(
                 builder: (context) => ListTile(
                   onTap: () async {
-                    var path = await prepareTestPdf();
+                    var path = await prepareTestPdf(doc);
                     Navigator.of(context).push(PageRouteTransition(
                         animationType: AnimationType.slide_right,
                         builder: (context) => DFA(path)));
@@ -116,7 +120,12 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
                   Icons.info_outline,
                   color: Colors.blueGrey.shade600,
                 ),
-                onTap: () {},
+                onTap: () async {
+                  var path = await prepareTestPdf(_documentPath1);
+                  Navigator.of(context).push(PageRouteTransition(
+                      animationType: AnimationType.slide_right,
+                      builder: (context) => DFA(path)));
+                },
               )
             ],
           ),
@@ -145,6 +154,12 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
                   Icons.info_outline,
                   color: Colors.blueGrey.shade600,
                 ),
+                onTap: () async {
+                  var path = await prepareTestPdf(docs1);
+                  Navigator.of(context).push(PageRouteTransition(
+                      animationType: AnimationType.slide_right,
+                      builder: (context) => DFA(path)));
+                },
               )
             ],
           ),
@@ -173,6 +188,12 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
                   Icons.info_outline,
                   color: Colors.blueGrey.shade600,
                 ),
+                onTap: () async {
+                  var path = await prepareTestPdf(docs2);
+                  Navigator.of(context).push(PageRouteTransition(
+                      animationType: AnimationType.slide_right,
+                      builder: (context) => DFA(path)));
+                },
               )
             ],
           ),
@@ -201,6 +222,12 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
                   Icons.info_outline,
                   color: Colors.blueGrey.shade600,
                 ),
+                onTap: () async {
+                  var path = await prepareTestPdf(docs3);
+                  Navigator.of(context).push(PageRouteTransition(
+                      animationType: AnimationType.slide_right,
+                      builder: (context) => DFA(path)));
+                },
               )
             ],
           ),
@@ -229,6 +256,12 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
                   Icons.info_outline,
                   color: Colors.blueGrey.shade600,
                 ),
+                onTap: () async {
+                  var path = await prepareTestPdf(docs4);
+                  Navigator.of(context).push(PageRouteTransition(
+                      animationType: AnimationType.slide_right,
+                      builder: (context) => DFA(path)));
+                },
               )
             ],
           ),
