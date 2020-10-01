@@ -12,7 +12,7 @@ class login extends StatefulWidget {
 
 class _loginState extends State<login> with SingleTickerProviderStateMixin {
   AnimationController _controller;
-  Animation<double> _animation, animation, animation1;
+  Animation<double> _animation, animation, animation1, animation2;
 
   @override
   void initState() {
@@ -24,6 +24,8 @@ class _loginState extends State<login> with SingleTickerProviderStateMixin {
     animation = new Tween(begin: 1.0, end: 0.0).animate(
         CurvedAnimation(parent: _controller, curve: Curves.elasticInOut));
     animation1 = new Tween(begin: -0.8, end: 0.0).animate(
+        CurvedAnimation(parent: _controller, curve: Curves.elasticInOut));
+    animation2 = new Tween(begin: 1.0, end: 0.0).animate(
         CurvedAnimation(parent: _controller, curve: Curves.elasticInOut));
     _controller.forward();
   }
@@ -66,23 +68,27 @@ class _loginState extends State<login> with SingleTickerProviderStateMixin {
                             animation1.value * width, 0.0, 0.0),
                       ),
                     ),
-                    SleekButton(
-                      onTap: () {
-                        Navigator.of(context).push(PageRouteTransition(
-                            animationType: AnimationType.fade,
-                            builder: (context) => home()));
-                      },
-                      style: SleekButtonStyle.outlined(
-                        color: Colors.purple,
-                        context: context,
-                        rounded: true,
-                        size: SleekButtonSize.medium,
+                    Transform(
+                      transform: Matrix4.translationValues(
+                          animation2.value * width, 0.0, 0.0),
+                      child: SleekButton(
+                        onTap: () {
+                          Navigator.of(context).push(PageRouteTransition(
+                              animationType: AnimationType.slide_down,
+                              builder: (context) => home()));
+                        },
+                        style: SleekButtonStyle.outlined(
+                          color: Colors.purple,
+                          context: context,
+                          rounded: true,
+                          size: SleekButtonSize.medium,
+                        ),
+                        child: Text("Are You Ready",
+                            style: GoogleFonts.bungeeShade(
+                                fontSize: 21,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.purple)),
                       ),
-                      child: Text("Are You Ready",
-                          style: GoogleFonts.bungeeShade(
-                              fontSize: 21,
-                              fontWeight: FontWeight.normal,
-                              color: Colors.purple)),
                     )
                   ],
                 ),

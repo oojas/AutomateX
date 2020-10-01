@@ -8,7 +8,7 @@ class splash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SplashScreen(
-      seconds: 5,
+      seconds: 3,
       navigateAfterSeconds: login(),
       loadingText: Text("AutomateX",
           textAlign: TextAlign.center,
