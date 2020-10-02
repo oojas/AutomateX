@@ -36,7 +36,7 @@ class _floatfileState extends State<floatfile>
   void initState() {
     super.initState();
     _controller =
-        AnimationController(duration: Duration(seconds: 1), vsync: this);
+        AnimationController(duration: Duration(seconds: 3), vsync: this);
     animation = new Tween(begin: -1.0, end: 0.0).animate(
         CurvedAnimation(parent: _controller, curve: Curves.bounceInOut));
     _controller.forward();

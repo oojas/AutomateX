@@ -271,7 +271,7 @@ class _homeState extends State<home> with SingleTickerProviderStateMixin {
             child: FloatingActionButton(
               onPressed: () {
                 Navigator.of(context).push(PageRouteTransition(
-                    animationType: AnimationType.scale,
+                    animationType: AnimationType.slide_up,
                     builder: (context) => floatfile()));
               },
               shape: RoundedRectangleBorder(
