@@ -27,6 +27,7 @@ class _loginState extends State<login> with SingleTickerProviderStateMixin {
         CurvedAnimation(parent: _controller, curve: Curves.elasticInOut));
     animation2 = new Tween(begin: 1.0, end: 0.0).animate(
         CurvedAnimation(parent: _controller, curve: Curves.elasticInOut));
+
     _controller.forward();
   }
 
@@ -88,6 +89,23 @@ class _loginState extends State<login> with SingleTickerProviderStateMixin {
                                 fontSize: 21,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.purple)),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 100.0, horizontal: 30),
+                      child: SleekButton(
+                        style: SleekButtonStyle.light(
+                          color: Colors.purple,
+                          context: context,
+                          rounded: true,
+                          size: SleekButtonSize.medium,
+                        ),
+                        child: Text("Made by Ojas Gupta",
+                            style: GoogleFonts.pacifico(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.pink.shade900)),
                       ),
                     )
                   ],
