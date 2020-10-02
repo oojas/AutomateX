@@ -40,10 +40,17 @@ dependencies:
   firebase_analytics: ^5.0.6
   sleek_button: ^0.1.1
   
+  
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: ^0.8.0
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "icon/img.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
