@@ -1,4 +1,3 @@
-import 'package:automateX/Pages/floatingfile.dart';
 import 'package:automateX/login.dart';
 import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
@@ -10,7 +9,7 @@ class splash extends StatelessWidget {
   Widget build(BuildContext context) {
     return SplashScreen(
       seconds: 3,
-      navigateAfterSeconds: floatfile(),
+      navigateAfterSeconds: login(),
       loadingText: Text("AutomateX",
           textAlign: TextAlign.center,
           textDirection: TextDirection.ltr,

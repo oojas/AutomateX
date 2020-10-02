@@ -67,6 +67,7 @@ flutter:
     - lib/Assets/Minimization of DFA.pdf
     - lib/Assets/CNF GNF CFG.pdf
     - lib/Assets/practice.pdf
+    - lib/Notes/
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

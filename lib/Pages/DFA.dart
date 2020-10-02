@@ -11,6 +11,7 @@ class DFA extends StatelessWidget {
     return PDFViewerScaffold(
         appBar: AppBar(
           title: Text("Document"),
+          backgroundColor: Colors.blueGrey.shade500,
         ),
         path: pdfPath);
   }
