@@ -4,7 +4,8 @@ Flutter App for learning finite automata.
 
 ## Getting Started
 
-This project is made for helping people learning finite automata in an easier way
+This project is made for helping people learning finite automata in an easier way.
+- [Download the apk](https://drive.google.com/file/d/12HdOIktn5NLu6EZG64P4h_KH-HsZkpZN/view?usp=sharing)
 
 A few resources to get you started if this is your first Flutter project:
 
