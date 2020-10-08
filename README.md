@@ -1,6 +1,6 @@
 # automateX
 
-Flutter App for learning finite automata.
+Notes and Practice Sesh for automata 
 
 ## Getting Started
 
